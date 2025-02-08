@@ -1,0 +1,46 @@
+@import './fonts.scss';
+@import './colors.scss';
+@import '../../shared/components/Notify/react-toastify.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+
+  &::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $stroke-color-2;
+    border-radius: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: linear-gradient(269.59deg, #01ed34 -12.09%, #011fa7 97.7%);
+    border-radius: 5px;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background: $color-bg;
+  display: flex;
+  min-height: 100vh;
+}
+
+div#__next {
+  flex: 1 1 auto;
+  max-width: -webkit-fill-available;
+  max-width: -moz-available;
+}
+
+.swiper {
+  max-width: 90vw;
+  cursor: pointer;
+}

@@ -1,0 +1,41 @@
+@import '@/shared/styles/mixins';
+
+.price {
+  margin-top: 30px;
+
+  &__title {
+    font-family: $secondary-font;
+    font-size: 16px;
+    line-height: 22px;
+    color: $stroke-color-1;
+    font-weight: 400;
+    margin: 0;
+  }
+
+  &__amount {
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 28px;
+    color: $text-color-1;
+    margin-top: 14px;
+  }
+
+  button {
+    margin-top: 44px;
+    max-width: 375px;
+    width: 100%;
+    height: 57px;
+    padding: 17px 25px;
+    box-shadow: none;
+
+    @include media-breakpoint-md {
+      max-width: 100%;
+      margin-top: 34px;
+    }
+
+    p {
+      font-family: $secondary-font;
+      font-weight: 700;
+    }
+  }
+}

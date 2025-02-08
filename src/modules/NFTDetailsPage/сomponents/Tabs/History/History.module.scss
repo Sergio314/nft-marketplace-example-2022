@@ -1,0 +1,37 @@
+@import '@/shared/styles/mixins';
+
+.histories {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  &__history {
+    border: 1px solid $text-color-2;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    gap: 20px;
+
+    img {
+      width: 50px;
+      height: 50px;
+      border: 2px solid $text-color-2;
+      border-radius: 50%;
+    }
+
+    &__username {
+      font-size: 18px;
+      line-height: 24px;
+      color: $text-color-1;
+    }
+
+    &__description {
+      font-family: $secondary-font;
+      font-size: 16px;
+      line-height: 22px;
+      color: $text-color-1;
+      margin-top: 6px;
+    }
+  }
+}

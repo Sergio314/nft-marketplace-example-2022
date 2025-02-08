@@ -1,0 +1,166 @@
+@import '@/shared/styles/mixins.scss';
+
+.create-avatar-page {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  margin: 0 80px;
+
+  @include media-breakpoint-md {
+    margin: 0 16px;
+  }
+
+  .back_arrow {
+    margin-bottom: 50px;
+    margin-top: 30px;
+    @include media-breakpoint-md {
+      margin-bottom: 30px;
+    }
+  }
+
+  h3 {
+    padding-bottom: 20px;
+    border-bottom: 1px solid $stroke-color-2;
+    margin-bottom: 40px;
+    @include font-universal('Roboto', sans-serif, 32px, 700, 39px);
+    @include media-breakpoint-md {
+      font-weight: 500;
+      font-size: 23px;
+      line-height: 28px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+  }
+
+  &__body {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 25px;
+    @include media-breakpoint-lg() {
+      flex-direction: column;
+      justify-content: center;
+    }
+    &__upper {
+      flex: 1;
+      display: flex;
+      model-viewer {
+        width: 100%;
+        height: 100%;
+        min-height: 350px;
+        --poster-color: transparent;
+      }
+    }
+    &__form {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+    // justify-content: space-around;
+    &__label {
+      @include font-universal('Open Sans', sans-serif, 16px, 400, 22px, 0em, left, $text-color-3);
+      margin-bottom: 12px;
+    }
+    &__input {
+      input {
+        @include font-universal('Roboto', sans-serif, 18px, 400, 24px, 0em, left);
+        margin-bottom: 20px;
+      }
+    }
+    &__link-tip {
+      @include font-universal('Roboto', sans-serif, 11px, 500, 14px, 0em, left, $text-color-3);
+      margin-top: -12px;
+      margin-bottom: 20px;
+    }
+    &__textarea {
+      textarea {
+        @include font-universal('Roboto', sans-serif, 18px, 400, 24px, 0em, left);
+      }
+    }
+    &__select {
+      width: 50%;
+      margin-top: 12px;
+      margin-bottom: 20px;
+      button {
+        @include font-universal('Roboto', sans-serif, 18px, 400, 24px, 0em, left);
+      }
+    }
+    &__button {
+      width: 102px;
+      margin-top: 18px;
+      align-self: flex-end;
+      @include media-breakpoint-md {
+        width: 100%;
+      }
+    }
+    img {
+      @include media-breakpoint-lg() {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+.create-avatar-popup {
+  position: fixed;
+  top: 20%;
+  left: 25%;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  align-items: center;
+  transform: scale(0);
+  transition: 0.3s;
+  opacity: 0;
+  pointer-events: none;
+  background-color: #051d2d;
+
+  height: 656px;
+  width: 863px;
+  border-radius: 16px;
+  &__header {
+    color: #fdfdfd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #3e3e3e;
+    position: relative;
+    @include font-universal(Roboto, sans-serif, 32px, 400, 39px);
+
+    width: 100%;
+    p {
+      margin: 0;
+    }
+  }
+  img {
+    margin-top: 45px;
+  }
+  h6 {
+    width: 489px;
+    margin-bottom: 55px;
+
+    @include font-universal(Roboto, sans-serif, 16px, 500, 22px, 0em, center);
+  }
+  &--active {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: all;
+  }
+}
+.blur {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #000000;
+  opacity: 60%;
+}
+.player {
+  width: 100%;
+  height: calc(100vh - 244px);
+  min-height: 768px;
+}

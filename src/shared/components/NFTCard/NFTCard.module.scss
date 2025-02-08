@@ -1,0 +1,200 @@
+@import '@/shared/styles/mixins';
+
+.nftCard {
+  max-width: 417px;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid $stroke-color-2;
+  padding: 1px;
+  background: $color-bg;
+
+  &__body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+  }
+
+  &__image {
+    max-width: 100%;
+    margin: 15px 15px 0 15px;
+    position: relative;
+    display: flex;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 99px;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0) 91.67%);
+      top: 0;
+      left: 0;
+      border-radius: 10px;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 10px;
+    }
+  }
+
+  &__playBtn {
+    width: 30px;
+    height: 30px;
+    background: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    box-shadow: 0 4px 15px rgba(0, 135, 211, 0.4);
+
+    svg {
+      width: 8.5px;
+      height: 8.5px;
+      margin-left: 1px;
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 23px;
+    line-height: 28px;
+    color: $text-color-1;
+    margin: 20px 20px 15px;
+
+    @include media-breakpoint-xxxl {
+      font-size: 22px;
+      line-height: 24px;
+      color: $text-color-1;
+      margin: 16px 18px 12px;
+    }
+  }
+
+  &__action {
+    border-top: 0.5px solid $stroke-color-2;
+    padding: 15px 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  &__priceColumn {
+    &__title {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+      color: $text-color-3;
+
+      @include media-breakpoint-xxxl {
+        font-size: 14px;
+        line-height: 18px;
+      }
+    }
+
+    &__value {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 20px;
+      color: $text-color-1;
+      margin-top: 8px;
+
+      @include media-breakpoint-xxxl {
+        line-height: 18px;
+        margin-top: 4px;
+      }
+    }
+  }
+
+  &__buyBtn {
+    padding: 0 15px;
+    height: 40px;
+    text-transform: capitalize;
+  }
+
+  &.adaptive {
+    .nftCard {
+      &__title {
+        @include media-breakpoint-xxl {
+          font-size: 18px;
+          font-weight: normal;
+        }
+
+        @include media-breakpoint-xl {
+          margin: 20px 12px 15px;
+        }
+
+        @include media-breakpoint-md {
+          font-size: 16px;
+          line-height: 20px;
+          margin: 15px 10px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 1;
+          line-clamp: 1;
+          -webkit-box-orient: vertical;
+        }
+      }
+
+      &__image {
+        @include media-breakpoint-xl {
+          margin: 10px 10px 0 10px;
+        }
+
+        @include media-breakpoint-md {
+          margin: 0;
+
+          img, &:before {
+            border-radius: 10px 10px 0 0;
+          }
+        }
+      }
+
+      &__action {
+        @include media-breakpoint-xl {
+          padding: 15px 12px 20px;
+        }
+
+        @include media-breakpoint-md {
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 15px 13px 30px 10px;
+        }
+      }
+
+      &__buyBtn {
+        @include media-breakpoint-xl {
+          p {
+            font-weight: 500;
+            font-size: 16px;
+          }
+        }
+
+        @include media-breakpoint-md {
+          width: 100%;
+          margin-top: 15px;
+
+          p {
+            font-size: 16px;
+          }
+        }
+      }
+
+      &__playBtn {
+        @include media-breakpoint-md {
+          width: 24px;
+          height: 24px;
+          top: 10px;
+          right: 10px;
+        }
+      }
+
+      &__priceColumn__title {
+        @include media-breakpoint-md {
+          font-weight: 700;
+          font-size: 11px;
+          line-height: 14px;
+        }
+      }
+    }
+  }
+}

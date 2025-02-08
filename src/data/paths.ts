@@ -1,0 +1,15 @@
+export const paths = {
+  home: '/',
+  login: '/login',
+  signUp: '/signup',
+  resetPass: '/reset-password',
+  verifyUser: '/verification',
+  venues: '/venues',
+  venue: '/venues/venue',
+  nftListings: '/nft-listings',
+  nftDetails: '/nft-listings/[id]',
+  forgotPassword: '/forgot-password',
+  faq: '/faq',
+  createAvatar: '/create-avatar',
+  creator: '/creator',
+};

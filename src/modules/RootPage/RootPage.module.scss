@@ -1,0 +1,17 @@
+@import "@/shared/styles/mixins.scss";
+
+.homePage {
+    background-image: url("../../resources/images/home-page-background.png");
+    background-repeat: no-repeat;
+    background-position-x: center;
+
+    @include media-breakpoint-xxxl {
+        background-size: 100%;
+    }
+
+    @include media-breakpoint-md {
+        background-size: 1800px;
+        background-position-y: -120px;
+        background-position-x: -900px;
+    }
+}

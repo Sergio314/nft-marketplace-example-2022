@@ -1,0 +1,66 @@
+@import '@/shared/styles/mixins';
+
+.filter {
+  margin-top: 50px;
+  position: relative;
+
+  @include media-breakpoint-md {
+    margin-top: 40px;
+  }
+
+  &__tabs {
+    padding: 20px 24px;
+    border: 1px solid $stroke-color-2;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+
+    @include media-breakpoint-md {
+      padding: 0;
+      border: none;
+    }
+
+    button {
+      &:last-child {
+        margin-left: 30px;
+      }
+
+      @include media-breakpoint-xl {
+        height: 48px;
+        &:last-child {
+          margin-left: 20px;
+        }
+
+        p {
+          font-weight: 500;
+          font-size: 16px;
+        }
+      }
+
+      @include media-breakpoint-md {
+        padding: 0 20px;
+        height: 42px;
+        &:last-child {
+          margin-left: 10px;
+        }
+
+        p {
+          font-size: 11px;
+        }
+      }
+    }
+  }
+
+  &__sort {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+
+    @include media-breakpoint-md {
+      position: static;
+      margin-top: 30px;
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}

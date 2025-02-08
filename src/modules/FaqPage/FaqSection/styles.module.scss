@@ -1,0 +1,67 @@
+@import '@/shared/styles/mixins';
+
+.faqSection {
+  width: 100%;
+  margin-bottom: 100px;
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 25px;
+    margin-top: 50px;
+    border-bottom: 1px solid $stroke-color-2;
+  }
+
+  &__title {
+    font-family: $primary-font;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    text-align: center;
+    color: $text-color-1;
+
+    @include media-breakpoint-md {
+      font-size: 23px;
+    }
+  }
+
+  &__accordions {
+    max-width: 860px;
+    margin: 50px auto;
+  }
+
+  &__accordion {
+    background-color: transparent;
+    color: $white;
+    border: 1px solid #3e3e3e;
+    border-radius: 5px;
+    margin-bottom: 30px;
+
+    &__arrow {
+      width: 15px;
+      opacity: 0.5;
+    }
+
+    &__summary {
+      font-weight: 500;
+      font-size: 23px;
+      line-height: 28px;
+      margin: 4px 0;
+
+      @include media-breakpoint-md {
+        font-size: 16px;
+      }
+    }
+    &__details {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+
+      color: #868686;
+
+      @include media-breakpoint-md {
+        font-size: 14px;
+      }
+    }
+  }
+}

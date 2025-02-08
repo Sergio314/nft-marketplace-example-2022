@@ -1,0 +1,74 @@
+@import "@/shared/styles/mixins.scss";
+
+.dropdown {
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        cursor: pointer;
+
+        & > p {
+            @include media-breakpoint-xxxl {
+                font-size: 14px;
+            }
+        }
+
+        & > svg {
+            width: 16px;
+            height: 16px;
+
+            @include media-breakpoint-xxxl {
+                width: 12px;
+                height: 12px;
+            }
+        }
+        
+    }
+
+    &__menu {
+        background: $color-bg;
+        border: 1px solid #3e3e3e;
+        box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.4);
+        border-radius: 4px;
+        width: 205px;
+        margin-top: 45px;
+
+        @include media-breakpoint-xxxl {
+            margin-top: 35px;
+            width: 180px;
+        }
+
+        &_item {
+            color: $white;
+            transition: 0.2s all;
+
+            &:hover {
+                color: $primary;
+            }
+
+            & > p, &_active > p {
+                font-size: 18px;
+
+                @include media-breakpoint-xxxl {
+                    font-size: 16px;
+                    line-height: 22px;
+                }
+            }
+
+            &_active {
+                color: $primary;
+                position: relative;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    height: 100%;
+                    width: 2px;
+                    background: $primary;
+                    left: 0;
+                    top: 0;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,32 @@
+@import '/src/shared/styles/mixins.scss';
+
+.Page404 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__center-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    svg {
+      width: 60%;
+      height: 60%;
+    }
+  }
+  h3 {
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 55px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  &__errButton {
+    width: 375px;
+    height: 57px;
+    margin-bottom: 132px;
+  }
+}

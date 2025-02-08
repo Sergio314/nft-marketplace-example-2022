@@ -1,0 +1,36 @@
+@import '@/shared/styles/mixins';
+
+.about {
+  margin-top: 78px;
+
+  @include media-breakpoint-md {
+    margin-top: 66px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    color: white;
+
+    @include media-breakpoint-md {
+      font-weight: 500;
+      font-size: 23px;
+      line-height: 28px;
+    }
+  }
+
+  &__description {
+    max-width: 996px;
+    font-size: 18px;
+    line-height: 24px;
+    color: $white;
+    margin-top: 20px;
+
+    @include media-breakpoint-md {
+      font-size: 16px;
+      line-height: 22px;
+      margin-top: 10px;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+@import '@/shared/styles/mixins.scss';
+
+.button {
+  text-transform: none;
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+}

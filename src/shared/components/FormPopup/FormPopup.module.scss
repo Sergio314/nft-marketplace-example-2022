@@ -1,0 +1,83 @@
+@import '@/shared/styles/mixins.scss';
+
+.Popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 863px;
+  width: 100%;
+  background: #051d2d;
+  border-radius: 16px;
+  padding-bottom: 55px;
+  border: none;
+  outline: none;
+  @include media-breakpoint-lg() {
+    max-width: 789px;
+  }
+  @include media-breakpoint-md() {
+    max-width: 469px;
+  }
+  @include media-breakpoint-sm() {
+    max-width: 396px;
+  }
+
+  &__button {
+    height: 57px;
+    display: block;
+    margin: 30px auto 0;
+    box-shadow: none;
+
+    span {
+      font-family: $secondary-font;
+    }
+  }
+
+  &__header {
+    font-family: $primary-font;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 39px;
+    color: $text-color-1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $stroke-color-2;
+    margin-bottom: 53px;
+    position: relative;
+
+    h3 {
+      margin: 0;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    right: 28px;
+    cursor: pointer;
+    top: 28px;
+    width: 16px;
+    height: 16px;
+    @include media-breakpoint-sm() {
+      display: none;
+    }
+  }
+
+  &__core-text {
+    max-width: 489px;
+    font-family: $primary-font;
+    line-height: 29px;
+    color: $text-color-1;
+    margin-bottom: 26px;
+    text-align: center;
+    margin: 0 auto;
+    @include media-breakpoint-md() {
+      padding: 0 68px;
+    }
+    @include media-breakpoint-sm() {
+      padding: 0 49px;
+    }
+  }
+}

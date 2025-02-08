@@ -1,0 +1,81 @@
+@import "@/shared/styles/mixins.scss";
+
+.buyToken {
+  margin-top: 100px;
+  position: relative;
+  background-image: url('./../../../../resources/images/home-page-token-banner.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  padding: 220px 0 270px 152px;
+
+  @include media-breakpoint-xxxl {
+    padding: 190px 100px 140px;
+  }
+
+  @include media-breakpoint-lg {
+    padding-left: 10px;
+  }
+
+  @include media-breakpoint-md {
+    margin-top: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    background-size: 1100px;
+    background-position: 10%;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+
+    @include media-breakpoint-md {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transform: translateY(-60px);
+    }
+  }
+
+  &__title {
+    font-weight: 800;
+    font-size: 56px;
+    line-height: 140%;
+    color: $text-color-1;
+    margin: 0;
+
+    @include media-breakpoint-xxxl {
+      font-size: 44px;
+      max-width: 550px;
+      line-height: 120%;
+      margin-bottom: 18px;
+    }
+
+    @include media-breakpoint-md {
+      font-size: 32px;
+      line-height: 39px;
+      font-weight: 700;
+    }
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 140%;
+    color: #ffffff;
+    max-width: 666px;
+    margin: 20px 0;
+
+    @include media-breakpoint-xxxl {
+      font-size: 16px;
+      line-height: 150%;
+      max-width: 500px;
+      margin-bottom: 30px;
+    }
+
+    @include media-breakpoint-md {
+      font-size: 16px;
+      line-height: 150%;
+    }
+  }
+}

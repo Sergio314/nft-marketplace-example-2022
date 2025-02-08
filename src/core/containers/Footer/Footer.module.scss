@@ -1,0 +1,359 @@
+@import "@/shared/styles/mixins.scss";
+
+.footer {
+  position: relative;
+  max-width: 1800px;
+  padding: 0 80px;
+  margin: 60px auto 0;
+
+  @include media-breakpoint-xl {
+    padding: 0 32px;
+  }
+
+  &__head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__logo {
+      cursor: pointer;
+
+      @include media-breakpoint-xxxl {
+        width: 120px;
+      }
+    }
+
+    &__actions {
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+
+      &_getInTouch {
+        font-weight: 500;
+        font-size: 23px;
+        line-height: 28px;
+        color: $text-color-1;
+        cursor: pointer;
+      }
+
+      &_sendMessage {
+        cursor: pointer;
+        margin-left: 20px;
+        font-weight: 700;
+        font-size: 18px;
+        text-align: center;
+      }
+    }
+  }
+
+  &__border {
+    height: 2px;
+    width: 100%;
+
+    &_top {
+      background: linear-gradient(269.59deg, #01e0ed -12.09%, #0165a7 97.7%);
+      margin-top: 40px;
+
+      @include media-breakpoint-xxxl {
+        margin-top: 20px;
+      }
+    }
+
+    &_bottom {
+      background: linear-gradient(269.59deg, #0165a7 -12.09%, #01e0ed 97.7%);
+    }
+  }
+
+  &__content {
+    padding: 40px 0;
+    width: 100%;
+    display: flex;
+
+    @include media-breakpoint-xxxl {
+      padding: 30px 0;
+      height: 250px;
+    }
+
+    @include media-breakpoint-xl {
+      height: auto;
+    }
+
+    &__leftSection {
+      padding-right: 93.5px;
+      border-right: 1px solid $stroke-color-2;
+      max-width: 464px;
+      min-width: 464px;
+
+      @include media-breakpoint-xxxl {
+        max-width: 440px;
+        min-width: 440px;
+      }
+
+      &_description {
+        max-width: 370px;
+        font-size: 16px;
+        line-height: 22px;
+        color: $text-color-3;
+        margin-bottom: 20px;
+
+        @include media-breakpoint-xxxl {
+          width: 420px;
+          margin-bottom: 15px;
+        }
+      }
+
+      &_join {
+        font-weight: 500;
+        font-size: 23px;
+        line-height: 28px;
+        margin-bottom: 20px;
+        color: #fff;
+
+        @include media-breakpoint-xxxl {
+          font-size: 21px;
+          line-height: 26px;
+          margin-bottom: 15px;
+        }
+
+        & > span {
+          background: $main-color-1;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          margin-right: 7px;
+        }
+      }
+
+      &_links {
+        display: flex;
+
+        &_item {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          cursor: pointer;
+          background: rgba(253, 253, 253, 0.05);
+          display: flex;
+          align-items: center;
+
+          @include media-breakpoint-xxxl {
+            width: 44px;
+            height: 44px;
+          }
+
+          &:not(:last-child) {
+            margin-right: 20px;
+
+            @include media-breakpoint-xxxl {
+              margin-right: 10px;
+            }
+          }
+
+          & svg {
+            width: 25px;
+            height: 25px;
+            margin: 0 auto;
+
+            @include media-breakpoint-xxxl {
+              width: 20px;
+              height: 20px
+            }
+          }
+        }
+      }
+    }
+
+    &__rightSection {
+      display: flex;
+      justify-content: space-between;
+      grid-template-columns: repeat(4, auto);
+      margin-left: 93px;
+      width: 100%;
+      gap: 30px;
+
+      @include media-breakpoint-xxxl {
+        margin-left: 63px;
+        padding-right: 20px;
+      }
+
+      &__column {
+        &_title {
+          font-weight: 500;
+          font-size: 23px;
+          line-height: 28px;
+          color: $text-color-1;
+
+          @include media-breakpoint-xxxl {
+            font-size: 21px;
+            line-height: 24px;
+          }
+        }
+
+        &_links {
+          padding: 0;
+          cursor: pointer;
+          margin: 0;
+
+          &_item {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 20px;
+            color: $text-color-1;
+            mix-blend-mode: normal;
+            opacity: 0.7;
+            display: block;
+            position: relative;
+            padding-left: 5px;
+            margin-top: 30px;
+
+            @include media-breakpoint-xxxl {
+              font-weight: 400;
+              font-size: 15px;
+              line-height: 18px;
+              margin-top: 12px;
+            }
+
+            &::before {
+              content: "";
+              display: block;
+              width: 3px;
+              height: 3px;
+              border-radius: 50%;
+              background: linear-gradient(270deg, #01e1ed 0%, #0063a6 100%);
+              position: absolute;
+              left: -4px;
+              top: 8px;
+            }
+          }
+        }
+      }
+    }
+
+    &__mobile {
+      display: none;
+      margin-top: 30px;
+      text-align: center;
+
+      &_join {
+        font-weight: 500;
+        font-size: 23px;
+        line-height: 28px;
+        color: white;
+
+        span {
+          background: $main-color-1;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+        }
+      }
+
+      &_description {
+        font-size: 16px;
+        line-height: 22px;
+        margin: 12.5px 0 0;
+        color: $text-color-3;
+        max-width: 600px;
+      }
+
+      &_links {
+        display: flex;
+        margin-top: 31.5px;
+        gap: 20px;
+
+        svg {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    font-size: 16px;
+    line-height: 22px;
+    color: #ffffff;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+
+    @include media-breakpoint-xxxl {
+      margin: 15px 0 20px;
+    }
+  }
+
+  @media (max-width: 1250px) {
+    &__content {
+      &__leftSection {
+        max-width: 415px;
+        min-width: 415px;
+        padding-right: 0;
+      }
+
+      &__rightSection {
+        margin-left: 40px;
+      }
+    }
+  }
+
+  @include media-breakpoint-xl {
+    padding-bottom: 30px;
+
+    &__content {
+      &__leftSection {
+        display: none;
+      }
+
+      &__rightSection {
+        margin-left: 0;
+      }
+
+      &__mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+
+  @include media-breakpoint-md {
+    &__head {
+      flex-direction: column;
+
+      &__logo div {
+        display: flex;
+      }
+
+      &__actions {
+        margin-top: 20px;
+      }
+    }
+
+    &__border_top {
+      margin-top: 20px;
+    }
+
+    &__content {
+      padding: 30px 0 70px;
+
+      &__rightSection {
+        display: grid;
+        grid-template-columns: auto auto;
+
+        & > div {
+          &:nth-child(2),
+          &:nth-child(3) {
+            order: 1;
+          }
+        }
+      }
+    }
+
+    &__bottom {
+      font-weight: 500;
+      font-size: 11px;
+      line-height: 14px;
+    }
+  }
+}

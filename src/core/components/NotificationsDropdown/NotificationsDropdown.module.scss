@@ -1,0 +1,54 @@
+@import "@/shared/styles/mixins.scss";
+
+.dropdown {
+  padding: 14px 30px 32px 25px;
+  color: white;
+
+  @include media-breakpoint-xxxl {
+    padding: 6px 20px 20px 20px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 32px;
+
+    @include media-breakpoint-xxxl {
+      font-weight: 700;
+      font-size: 28px;
+    }
+  }
+
+  &__tabs {
+    margin-top: 16px;
+    margin-bottom: 26px;
+    display: flex;
+    gap: 20px;
+
+    @include media-breakpoint-xxxl {
+      margin-top: 12px;
+      margin-bottom: 20px;
+      gap: 16px;
+    }
+
+    &_title {
+      font-weight: 500;
+      font-size: 23px;
+      margin-bottom: 20px;
+
+      @include media-breakpoint-xxxl {
+        font-size: 21px;
+        margin-bottom: 10px;
+      }
+    }
+
+    &_notifications {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      @include media-breakpoint-xxxl {
+        gap: 14px;
+      }
+    }
+  }
+}

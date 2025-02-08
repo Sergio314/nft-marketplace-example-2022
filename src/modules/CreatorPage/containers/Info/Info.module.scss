@@ -1,0 +1,48 @@
+@import '@/shared/styles/mixins';
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+  gap: 20px;
+
+  &__user {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    &__fullName {
+      font-family: $secondary-font;
+      font-weight: 500;
+      font-size: 23px;
+      color: white;
+    }
+
+    &__username {
+      font-size: 16px;
+      font-family: $secondary-font;
+      background: $main-color-1;
+      line-height: 1;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+    }
+  }
+
+  &__date {
+    font-size: 18px;
+    color: $white;
+  }
+
+  &__address button {
+    height: 57px;
+    box-shadow: none;
+    padding: 0 47px;
+
+    p {
+      font-family: $secondary-font;
+    }
+  }
+}

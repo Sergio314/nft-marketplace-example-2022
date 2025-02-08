@@ -1,0 +1,26 @@
+@import '@/core/styles/colors';
+
+.breadcrumbs {
+  li {
+    color: $white;
+    font-family: $secondary-font;
+
+    p, a {
+      color: $white;
+      font-family: $secondary-font;
+      font-size: 16px;
+      text-decoration: none;
+    }
+
+    &:last-child {
+      p {
+        background: $main-color-3;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        font-weight: 600;
+      }
+    }
+  }
+}

@@ -1,0 +1,102 @@
+@import '@/shared/styles/mixins';
+
+.sortDropdown {
+  &__button {
+    width: max-content;
+
+    & > p {
+      display: flex;
+      align-items: center;
+    }
+
+    &_icon {
+      display: inline-flex;
+      margin-left: 12.5px;
+
+      svg {
+        width: 15px;
+        height: 9px;
+
+        path {
+          fill: $main-color-2;
+        }
+      }
+    }
+
+    &:hover &_icon svg path {
+      fill: white;
+    }
+  }
+
+  &__menu {
+    background: $color-bg;
+    border: 1px solid $stroke-color-2;
+    box-shadow: 0 5px 20px 1px rgba(0, 135, 211, 0.4);
+    border-radius: 10px;
+    margin-top: 10.5px;
+
+    ul {
+      padding: 20px 0;
+
+      @include media-breakpoint-md {
+        padding: 10px 0;
+      }
+    }
+
+    &_item {
+      font-weight: 500;
+      font-size: 16px;
+      padding: 10px 34px 10px 30px;
+      color: white;
+
+      @include media-breakpoint-md {
+        font-size: 11px;
+        padding: 5px 17px 5px 15px;
+      }
+
+      &:hover,
+      &_active {
+        background: linear-gradient(270deg, #01e0ed 0%, #0165a7 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+      }
+
+      &__icon {
+        width: 17.6px;
+        margin-left: 15px;
+        display: inline-flex;
+      }
+    }
+  }
+
+  &.adaptive {
+    .sortDropdown {
+      &__button {
+        @include media-breakpoint-xl {
+          height: 48px;
+
+          p {
+            font-weight: 500;
+            font-size: 16px;
+          }
+        }
+
+        @include media-breakpoint-md {
+          padding: 0 20px;
+          height: 42px;
+
+          p {
+            font-size: 11px;
+          }
+
+          &_icon svg {
+            width: 10px;
+            height: 6px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,92 @@
+@import '@/shared/styles/mixins';
+
+.banner {
+  height: 400px;
+  width: 100%;
+  padding-top: 50px;
+  background-image: url('../../../../resources/images/creator-page-banner.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 48.3px;
+
+  @include media-breakpoint-md {
+    height: 300px;
+    padding-top: 37px;
+  }
+
+  & > div {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+    margin-bottom: 20px;
+
+    button {
+      width: 50px;
+      height: 50px;
+
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    &__socials {
+      display: flex;
+      gap: 20px;
+
+      button {
+        &:nth-child(1) {
+          background: #405698;
+        }
+        &:nth-child(2) {
+          background: #4CA8E6;
+        }
+      }
+
+      @include media-breakpoint-md {
+        display: none;
+      }
+    }
+
+    &__share {
+      button {
+        background: rgba(253, 253, 253, 0.15);
+      }
+
+      @include media-breakpoint-md {
+        position: absolute;
+        top: -7px;
+        right: 16px;
+
+        button {
+          width: 32px;
+          height: 32px;
+
+          svg {
+            width: 13px;
+            height: 13px;
+          }
+        }
+      }
+    }
+  }
+
+  &__avatar {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -48.3px;
+
+    @include media-breakpoint-md {
+      bottom: -46.2px;
+    }
+  }
+}

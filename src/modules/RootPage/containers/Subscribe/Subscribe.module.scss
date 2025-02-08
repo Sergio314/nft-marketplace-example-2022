@@ -1,0 +1,85 @@
+@import "@/shared/styles/mixins.scss";
+
+.subscribe {
+  position: relative;
+  margin-top: 70px;
+  background-image: url("./../../../../resources/images/home-page-subscribe-banner.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 200px 0 220px 150px;
+  z-index: 1;
+
+  @include media-breakpoint-xxxl {
+    margin-top: 100px;
+    margin-bottom: 50px;
+    background-size: 99%;
+    padding: 150px 0 170px 150px;
+  }
+  
+  @include media-breakpoint-xl {
+    padding-left: 80px;
+  }
+
+  @include media-breakpoint-md {
+    padding-left: 0px;
+    padding-top: 200px;
+    background-size: 1500px;
+    
+    border-radius: 18px;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+    max-width: 762px;
+    width: 100%;
+
+    @include media-breakpoint-md {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transform: translateY(-80px);
+      text-align: center;
+    }
+  }
+
+  &__title {
+    font-weight: 800;
+    font-size: 56px;
+    line-height: 68px;
+    color: $text-color-1;
+    margin: 0;
+
+    @include media-breakpoint-xxxl {
+      font-size: 44px;
+      max-width: 550px;
+      line-height: 46px;
+      margin-bottom: 16px;
+    }
+
+    @include media-breakpoint-md {
+      font-size: 32px;
+      line-height: 39px;
+      font-weight: 700;
+    }
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 24px;
+    color: $text-color-1;
+    margin: 20px 0;
+
+    @include media-breakpoint-xxxl {
+      font-size: 16px;
+      line-height: 150%;
+      max-width: 500px;
+      margin: 15px 0;
+    }
+
+    @include media-breakpoint-md {
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+}

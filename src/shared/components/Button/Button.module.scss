@@ -1,0 +1,97 @@
+@import "@/shared/styles/mixins.scss";
+
+.button {
+  padding: 0 24px;
+  height: 50px;
+  border-radius: 35px;
+  text-transform: none;
+  transition: 0.3s all;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+
+  &__text, &__contained__text {
+    font-size: 18px;
+    font-weight: 700;
+
+    @include media-breakpoint-xxxl {
+      font-size: 16px;
+      font-weight: 600;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 35px;
+    background: $main-color-1;
+    transition: 0.3s all;
+    z-index: -1;
+    opacity: 0;
+  }
+
+  &:hover {
+    color: white;
+    &::after {
+      opacity: 1;
+    }
+  }
+
+  &:disabled {
+    color: $primary;
+    opacity: 0.5;
+  }
+
+  &::before,
+  &__contained::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 35px;
+    padding: 2px;
+    background: $main-color-1;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  &__contained {
+    padding: 0 24px;
+    height: 50px;
+    border-radius: 35px;
+    text-transform: none;
+    transition: 0.5s all;
+    position: relative;
+    color: white;
+    background-size: 300% 100%;
+    background-image: linear-gradient(to right, #0165a7, #01cad5, #01cad5, #0165a7);
+    box-shadow: 0 2px 15px rgb(0 135 211 / 40%);
+    z-index: auto;
+
+    &:hover {
+      background-position: 100% 0%;
+    }
+
+    &:disabled {
+      color: $text-color-1;
+      opacity: 0.5;
+    }
+
+    &::before {
+      padding: 0px;
+      border-radius: 0px;
+    }
+  }
+
+  &, &__contained {
+    @include media-breakpoint-xxxl {
+      height: 40px;
+      padding: 0 18px;
+    }
+  }
+}

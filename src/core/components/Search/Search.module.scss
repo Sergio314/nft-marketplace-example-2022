@@ -1,0 +1,125 @@
+@import "@/shared/styles/mixins.scss";
+
+
+.search {
+    padding: 1px;
+    border-radius: 30px;
+    background: $stroke-color-2;
+
+    &_focused {
+        background-image: $main-color-1;
+    }
+
+    &__field {
+        width: 100%;
+        border-radius: 30px;
+        height: 50px;
+        color: white;
+        font-weight: 500;
+        font-size: 16px;
+        padding-left: 32px;
+        padding-right: 24px;
+        background: rgba(5, 18, 27);
+
+        @include media-breakpoint-xxxl {
+            height: 40px;
+            padding-left: 18px;
+            padding-right: 18px;
+            font-size: 14px;
+            border-radius: 26px;
+        }
+
+        &_searchIcon {
+            margin-top: 0 !important;
+            margin-right: 10px;
+
+            svg {
+                width: 20px;
+                height: 20px;
+
+                @include media-breakpoint-xxxl {
+                    width: 14px;
+                    height: 14px;
+                }
+            }
+        }
+
+        &_closeIcon {
+            cursor: pointer;
+
+            svg {
+                width: 14px;
+                height: 14px;
+            }
+        }
+    }
+
+    &__menu {
+        background: rgba(4, 19, 29, 0.7);
+        backdrop-filter: blur(20px);
+        padding: 30px 20px;
+        width: 453px;
+        border-radius: 0 0 10px 10px;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        margin-top: 20px;
+
+        &__item {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border-bottom: 1px solid $stroke-color-2;
+            padding-bottom: 15px;
+
+            img {
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+            }
+
+            &_column {
+                flex-grow: 1;
+            }
+
+            &_title {
+                font-weight: 500;
+                font-size: 16px;
+                color: $white;
+            }
+
+            &_subtitle {
+                font-weight: 500;
+                font-size: 11px;
+                margin-top: 10px;
+                color: $white;
+
+                span {
+                    background: $main-color-1;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    background-clip: text;
+                    text-fill-color: transparent;
+                    cursor: pointer;
+                }
+            }
+
+            &_view {
+                font-weight: 500;
+                font-size: 16px;
+                cursor: pointer;
+                background: $main-color-1;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                text-fill-color: transparent;
+            }
+        }
+
+        &__description {
+            font-weight: 500;
+            font-size: 11px;
+            margin-top: 30px;
+            color: white;
+        }
+    }
+}

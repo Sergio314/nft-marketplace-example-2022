@@ -1,0 +1,30 @@
+@import '@/shared/styles/mixins';
+
+.banner {
+  height: 532px;
+  padding-top: 50px;
+  background-image: url('../../../../resources/images/search-page-banner.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include media-breakpoint-md {
+    height: 446px;
+    padding-top: 37px;
+    background-position: right;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 45px;
+    text-align: center;
+    color: $white;
+    margin-top: 168px;
+
+    @include media-breakpoint-md {
+      font-weight: 500;
+      font-size: 23px;
+      margin-top: 127px;
+    }
+  }
+}

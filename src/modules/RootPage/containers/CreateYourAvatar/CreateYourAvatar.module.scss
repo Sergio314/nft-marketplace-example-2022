@@ -1,0 +1,78 @@
+@import "@/shared/styles/mixins.scss";
+
+.createNFT {
+  width: 100%;
+  display: flex;
+  margin-top: 104px;
+  border-radius: 10px;
+  padding: 200px 150px 170px;
+  position: relative;
+  background-image: url("../../../../resources/images/home-page-avatar-banner.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @include media-breakpoint-xxxl {
+    margin-top: 80px;
+    padding: 150px 100px 140px;
+  }
+
+  @include media-breakpoint-lg {
+    margin-top: 50px;
+    padding-left: 10px;
+    padding-right: 0;
+    background-size: 1500px;
+    padding-top: 325px;
+  }
+
+  &__content {
+    position: relative;
+
+    @include media-breakpoint-lg {
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transform: translateY(-100px);
+    }
+  }
+
+  &__title {
+    font-weight: 800;
+    font-size: 56px;
+    line-height: 140%;
+    color: $text-color-1;
+    margin-bottom: 20px;
+    max-width: 600px;
+
+    @include media-breakpoint-xxxl {
+      font-size: 44px;
+      max-width: 550px;
+      line-height: 120%;
+      margin-bottom: 18px;
+    }
+
+    @include media-breakpoint-md {
+      font-size: 32px;
+      line-height: 39px;
+      max-width: 390px;
+      font-weight: 700;
+    }
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 140%;
+    color: #ffffff;
+    margin-bottom: 40px;
+    max-width: 670px;
+
+    @include media-breakpoint-xxxl {
+      font-size: 16px;
+      line-height: 150%;
+      max-width: 490px;
+      margin-bottom: 30px;
+    }
+  }
+}

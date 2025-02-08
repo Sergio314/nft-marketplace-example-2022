@@ -1,0 +1,6 @@
+@import '@/shared/styles/mixins';
+
+.grid {
+  margin-top: 50px;
+  @include grid;
+}

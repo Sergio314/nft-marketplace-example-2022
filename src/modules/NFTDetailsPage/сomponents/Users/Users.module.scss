@@ -1,0 +1,61 @@
+@import '@/shared/styles/mixins';
+
+.users {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+
+  &__wrapper {
+    border: 1px solid $text-color-2;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    gap: 20px;
+    max-width: 300px;
+    width: 100%;
+
+    img {
+      border-radius: 50%;
+      height: 50px;
+      width: 50px;
+      border: 2px solid $text-color-2;
+
+      @include media-breakpoint-md {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+
+  &__info {
+    &__title {
+      font-family: $secondary-font;
+      font-size: 16px;
+      line-height: 22px;
+      color: $text-color-3;
+
+      @include media-breakpoint-md {
+        font-size: 11px;
+        line-height: 14px;
+      }
+    }
+
+    &__username {
+      font-size: 18px;
+      line-height: 24px;
+      color: $text-color-1;
+      margin-top: 6px;
+
+      &:hover {
+        color: $main-color-2;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+
+      @include media-breakpoint-md {
+        font-size: 16px;
+        line-height: 22px;
+      }
+    }
+  }
+}

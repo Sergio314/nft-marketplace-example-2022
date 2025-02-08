@@ -1,0 +1,83 @@
+@import '@/shared/styles/mixins.scss';
+
+.venue {
+  width: 100%;
+  margin-top: 87px;
+
+  @include media-breakpoint-xxxl {
+    margin-top: 70px;
+  }
+
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    align-items: center;
+
+    @include media-breakpoint-xxxl {
+      margin-bottom: 25px;
+    }
+
+    @include media-breakpoint-md {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__title {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 56px;
+    line-height: 68px;
+    color: $text-color-1;
+
+    @include media-breakpoint-xxxl {
+      font-size: 46px;
+      line-height: 52px;
+    }
+
+    @include media-breakpoint-md {
+      font-size: 32px;
+      line-height: 39px;
+      font-weight: 700;
+    }
+  }
+
+  &__moreBtn {
+    box-shadow: none;
+    padding: 17px 20px;
+    height: unset;
+
+    @include media-breakpoint-md {
+      & span {
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 500;
+      }
+    }
+  }
+
+  &__list_desktop {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+
+    @include media-breakpoint-lg {
+      gap: 35px;
+      flex-direction: column;
+    }
+  }
+
+  &__list_mobile {
+    display: none;
+    width: calc(100% + 32px);
+    margin-left: -16px;
+
+    &__slide {
+      max-width: 396px;
+    }
+
+    @include media-breakpoint-lg {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+@import '@/shared/styles/mixins';
+
+.tabs {
+  margin-top: 40px;
+
+  &__labels {
+    border-bottom: 1px solid $text-color-2;
+
+    &_item {
+      font-family: $secondary-font;
+      font-weight: 500;
+      font-size: 16px;
+      cursor: pointer;
+      color: white;
+      text-transform: capitalize;
+      padding: 12px 25px;
+
+      @include media-breakpoint-md {
+        padding: 12px 15px;
+      }
+    }
+  }
+}
