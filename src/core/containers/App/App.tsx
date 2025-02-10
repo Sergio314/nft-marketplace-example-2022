@@ -4,14 +4,14 @@ import { AppProps as NativeAppProps } from 'next/app';
 import { CacheProvider, EmotionCache, ThemeProvider } from '@emotion/react';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
-import { SessionProvider } from 'next-auth/react';
+// import { SessionProvider } from 'next-auth/react';
 
 import { mainTheme } from '@/core/theme';
 import createEmotionCache from '@/core/utils/createEmotionCache';
 import { persistor, store } from '@/core/store';
+import { NotificationContainer } from '@/shared/components/Notify/Notify';
 
 import favicon from '@/resources/favicon/favicon.png';
-import { NotificationContainer } from '@/shared/components/Notify/Notify';
 
 interface AppProps extends NativeAppProps {
   emotionCache: EmotionCache;
@@ -31,11 +31,11 @@ export const App: NextPage<AppProps> = (props) => {
       </Head>
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
-          <SessionProvider session={pageProps.session}>
+          {/* <SessionProvider session={pageProps.session}> */}
             <ThemeProvider theme={mainTheme}>
               <Component {...pageProps} />
             </ThemeProvider>
-          </SessionProvider>
+          {/* </SessionProvider> */}
         </PersistGate>
       </Provider>
     </CacheProvider>

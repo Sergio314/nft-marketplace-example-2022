@@ -44,10 +44,10 @@ export const Footer = () => {
                     </p>
                     <div className={styles.footer__content__leftSection_links}>
                         {socialLinks.map((socialLink, key) => (
-                            <Link target='_blank' rel='noreferrer' href={socialLink.href} key={key}>
-                                <a className={styles.footer__content__leftSection_links_item} target="_blank" rel="noreferrer">
+                            <Link className={styles.footer__content__leftSection_links_item} target='_blank' rel='noreferrer' href={socialLink.href} key={key}>
+                                {/* <a  target="_blank" rel="noreferrer"> */}
                                     <socialLink.icon />
-                                </a>
+                                {/* </a> */}
                             </Link>
                         ))}
                     </div>
@@ -58,8 +58,10 @@ export const Footer = () => {
                             <span className={styles.footer__content__rightSection__column_title}>{el.title}</span>
                             <ul className={styles.footer__content__rightSection__column_links}>
                                 {el.values.map((el, key) => (
-                                    <Link href={el.href} key={key}>
-                                        <a className={styles.footer__content__rightSection__column_links_item}>{el.name}</a>
+                                    <Link className={styles.footer__content__rightSection__column_links_item} href={el.href} key={key}>
+                                        {/* <a> */}
+                                            {el.name}
+                                        {/* </a> */}
                                     </Link>
                                 ))}
                             </ul>

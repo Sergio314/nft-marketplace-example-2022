@@ -26,7 +26,9 @@ export const Breadcrumbs = ({items}: BreadcrumbsProps): JSX.Element => {
 
         return (
           <Link href={{pathname: item.href, query: item.query}} key={index}>
-            <a>{item.name}</a>
+            {/* <a> */}
+              {item.name}
+            {/* </a> */}
           </Link>
         );
       })}

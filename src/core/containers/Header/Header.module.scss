@@ -101,6 +101,14 @@
         }
 
         &_mobile {
+            &_nav {
+                display: none;
+                cursor: pointer;
+
+                @include media-breakpoint-lg {
+                    display: block;
+                }
+            }
             &_icon {
                 display: none;
                 cursor: pointer;

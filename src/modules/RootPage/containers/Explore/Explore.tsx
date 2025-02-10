@@ -12,8 +12,10 @@ export const Explore = () => (
         cards.map((el, key) => (
           <div key={key} className={styles.explore__card}>
             <img className={styles.explore__card__image} src={el.img} alt={el.title} />
-            <Link href={paths.venues}>
-              <a className={styles.explore__card__link}>{el.title}</a>
+            <Link className={styles.explore__card__link} href={paths.venues}>
+              {/* <a> */}
+                {el.title}
+              {/* </a> */}
             </Link>
           </div>
         ))

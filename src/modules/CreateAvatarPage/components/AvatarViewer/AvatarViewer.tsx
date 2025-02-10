@@ -1,7 +1,8 @@
 import * as React from 'react';
 import '@google/model-viewer';
+import dynamic from 'next/dynamic';
 
-const AvatarViewer: any = ({ glbSource, className }) => {
+const AvatarViewer: React.FC<{ glbSource: string; className?: string }> = ({ glbSource, className }) => {
   return (
     <div className={className} id="card">
       <model-viewer
@@ -15,4 +16,4 @@ const AvatarViewer: any = ({ glbSource, className }) => {
   );
 };
 
-export default AvatarViewer;
+export default dynamic(() => Promise.resolve(AvatarViewer), { ssr: false });
