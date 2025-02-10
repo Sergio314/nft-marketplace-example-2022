@@ -1,19 +1,19 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import NextAuth, { NextAuthOptions } from 'next-auth';
-import GoogleProvider from 'next-auth/providers/google';
+// import NextAuth, { NextAuthOptions } from 'next-auth';
+// import GoogleProvider from 'next-auth/providers/google';
 
 import { api } from '@/core/api';
 import { authPaths } from '@/core/api/api.config';
 import { paths } from '@/data/paths';
 
-const nextAuthOptions = (req: NextApiRequest, res: NextApiResponse): NextAuthOptions => {
+const nextAuthOptions = (req: NextApiRequest, res: NextApiResponse) => {
   return {
     pages: { error: paths.login },
     providers: [
-      GoogleProvider({
-        clientId: process.env.GOOGLE_CLIENT_ID as string,
-        clientSecret: process.env.GOOGLE_CLIENT_SECRET as string,
-      }),
+      // GoogleProvider({
+      //   clientId: process.env.GOOGLE_CLIENT_ID as string,
+      //   clientSecret: process.env.GOOGLE_CLIENT_SECRET as string,
+      // }),
     ],
     callbacks: {
       signIn: async ({ account, profile }) => {
@@ -43,5 +43,5 @@ const nextAuthOptions = (req: NextApiRequest, res: NextApiResponse): NextAuthOpt
 };
 
 export default (req: NextApiRequest, res: NextApiResponse) => {
-  return NextAuth(req, res, nextAuthOptions(req, res));
+  // return NextAuth(req, res, nextAuthOptions(req, res));
 };

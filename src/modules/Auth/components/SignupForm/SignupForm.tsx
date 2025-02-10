@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { useCallback } from 'react';
 import { useRouter } from 'next/router';
-import { signIn } from 'next-auth/react';
+// import { signIn } from 'next-auth/react';
 import { Form, Formik } from 'formik';
 
 import { paths } from '@/data/paths';
@@ -17,7 +17,7 @@ import styles from './SignupForm.module.scss';
 export const SignupForm: React.FC<AuthPageProps> = ({ handleSubmit }) => {
   const router = useRouter();
 
-  const handleGoogle = () => signIn('google', { callbackUrl: '/' });
+  const handleGoogle = () => /* signIn('google', { callbackUrl: '/' }); */ undefined
 
   const routeHandler = (route: string) => () => router.push(route);
 
