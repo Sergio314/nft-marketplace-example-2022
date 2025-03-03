@@ -14,7 +14,7 @@ export const actionCheckSession = () => async (dispatch: TypedDispatch) => {
       dispatch({ type: ActionTypes.LOGOUT });
     }
   } catch (error) {
-    console.log(error);
+    console.error(error);
   } finally {
     dispatch({ type: ActionTypes.FINISH_LOADING });
   }

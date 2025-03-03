@@ -23,16 +23,16 @@ axiosInstance.interceptors.response.use(
     ) {
       deleteCookie('refresh');
       window.location.href = paths.login;
-      console.log(error);      
+      console.error(error);      
       return Promise.reject(error);
     }
 
     if (error.response.status !== 401) {
-      console.log(error);      
+      console.error(error);      
       return Promise.reject(error);
     }
     if (error.response.status === 404) {
-      console.log(error);      
+      console.error(error);      
       return Promise.reject('Backend is not functional');
     }
 
@@ -42,11 +42,11 @@ axiosInstance.interceptors.response.use(
       if (result.status === 200) {
         return axiosInstance(originalRequest);
       } else {
-      console.log(error);      
+      console.error(error);      
         return Promise.reject(error);
       }
     } catch (e) {
-      console.log(error);      
+      console.error(error);      
       return Promise.reject(e);
     }
   },

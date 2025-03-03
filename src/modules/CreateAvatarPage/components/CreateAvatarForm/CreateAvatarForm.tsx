@@ -92,11 +92,6 @@ export const CreateAvatarForm = (): any => {
     if (json.eventName === 'v1.avatar.exported') {
       createAvatarForm.setFieldValue('glbSource', json.data.url);
     }
-    // Get user id
-    if (json.eventName === 'v1.user.set') {
-      console.log(`User with id ${json.data.id} set:
-  ${JSON.stringify(json)}`);
-    }
   };
 
   const parse = (event: any) => {
